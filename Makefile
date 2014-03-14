@@ -6,11 +6,11 @@ INCLUDE=-I/usr/local/include -I/usr/include
 
 #CXX=g++
 CXX=clang++
-CXXFLAGS=-Wall -DDEBUG -std=c++11
+CXXFLAGS=-Wall -DDEBUG -std=c++11 -fPIC
 
 #CC=gcc
 CC=clang
-CFLAGS=-Wall -std=c99 -DDEBUG
+CFLAGS=-Wall -std=c99 -DDEBUG -fPIC
 
 default: nethelper.o staticlib test
 
