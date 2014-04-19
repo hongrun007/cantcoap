@@ -153,12 +153,12 @@ CoapPDU::CoapPDU(uint8_t *buffer, int bufferLength, int pduLength) {
 	_constructedFromBuffer = 1;
 
 	// options
-	_numOptions = 0;
-	_maxAddedOptionNumber = 0;
+//	_numOptions = 0;
+//	_maxAddedOptionNumber = 0;
 
 	// payload
-	_payloadPointer = NULL;
-	_payloadLength = 0;
+//	_payloadPointer = NULL;
+//	_payloadLength = 0;
 }
 
 /// Reset CoapPDU container so it can be reused to build a new PDU.
@@ -1174,7 +1174,7 @@ int CoapPDU::setPayload(uint8_t *payload, int len) {
 	uint8_t *payloadPointer = mallocPayload(len);
 	if(payloadPointer==NULL) {
 		DBG("Allocation of payload failed");
-		return 1;
+		return 2;
 	}
 
 	// copy payload contents
